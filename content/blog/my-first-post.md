@@ -1,13 +1,17 @@
 ---
-path: testing_post
+path: testing_code
 date: 2020-04-07T16:43:07.991Z
-title: My first post
+title: post with code
 description: just testing
 ---
-hello
+some code
 
-\`\``
+```python
+print(hello_world)
+```
 
-print("hello_world")
+more code
 
-\`\``
+```
+ls -l
+```
