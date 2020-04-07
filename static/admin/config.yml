@@ -1,5 +1,5 @@
 backend:
-  name: blog_test
+  name: github
   repo: djarecka/tmp_blog_test
 
 media_folder: static/assets
