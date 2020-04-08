@@ -13,11 +13,12 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
-        <h1
+        <h2
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            color: `rgb(47, 161, 214)`
           }}
         >
           <Link
@@ -30,7 +31,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h1>
+        </h2>
       )
     } else {
       header = (
@@ -44,11 +45,11 @@ class Layout extends React.Component {
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `rgb(47, 161, 214)`,
             }}
-            to={`/blog/`}
+            to={``}
           >
-            {title}
+           {title}
           </Link>
         </h3>
       )

@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Bio from "../components/bio"
+import Button from "../components/button"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -19,7 +20,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h2>{post.frontmatter.title}</h2>
         <p
           style={{
             ...scale(-1 / 5),
@@ -31,12 +32,14 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
+        <Button marginTop="85px" background="white" border color="black">Answer TODO</Button>
+        
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        {/* <Bio /> */}
 
         <ul
           style={{
