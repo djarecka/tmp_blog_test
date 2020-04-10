@@ -15,3 +15,19 @@ more code
 ```
 ls -l
 ```
+
+<details>
+<summary>
+<a class="btnfire small stroke">&nbsp;&nbsp;Solution</a>
+</summary>
+
+## ddd
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+
+```python
+print(hello_world)
+```
+</details>
