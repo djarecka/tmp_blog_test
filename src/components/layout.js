@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { login, logout } from "../utils/auth"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -75,6 +76,15 @@ class Layout extends React.Component {
         <ul style={{ listStyle: `none`, float: `right` }}>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/account/">Account</ListLink>
+        <a
+          href="#logout"
+          onClick={e => {
+            logout()
+            e.preventDefault()
+          }}
+        >
+          Log Out
+        </a>
       </ul>
         </div>
         <div
