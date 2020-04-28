@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { login, isAuthenticated, getProfile } from "../utils/auth"
 
 import Bio from "../components/bio"
 import Button from "../components/button"
@@ -10,6 +11,13 @@ import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
+    const { data } = this.props
+    if (!isAuthenticated()) {
+      login()
+      return <p>Redirecting to login...</p>
+    }
+    const user = getProfile()
+    
     const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
